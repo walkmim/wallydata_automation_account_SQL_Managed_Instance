@@ -28,39 +28,39 @@ workflow Scale-Up-Down-SQL-Managed-Instance
     param
     (
         # TenantId
-        [parameter(Mandatory=$false)] 
-        [string] $TenantId = '6eb0644f-1c17-4926-974e-48e7b8c4ea4a',
+        [parameter(Mandatory=$true)] 
+        [string] $TenantId = '',
 
         # Subscription Id
-        [parameter(Mandatory=$false)] 
-        [string] $SubscriptionId = '29a29a75-564a-411c-b8f3-1a30d2cac2a1',
+        [parameter(Mandatory=$true)] 
+        [string] $SubscriptionId = '',
 
         # Name of the Resource Group
-        [parameter(Mandatory=$false)] 
-        [string] $ResourceGroupName = 'rg-general-tests',
+        [parameter(Mandatory=$true)] 
+        [string] $ResourceGroupName = '',
 
         # The Azure SQL Managed Instance
-        [parameter(Mandatory=$false)] 
-        [string] $ManagedInstanceName = 'mi-casa-tu-casa',
+        [parameter(Mandatory=$true)] 
+        [string] $ManagedInstanceName = '',
 
         # Target Edition to the SQL Managed Instance
         # GeneralPurpose | BusinessCritical
-        [parameter(Mandatory=$false)] 
-        [string] $Edition = "GeneralPurpose",
+        [parameter(Mandatory=$true)] 
+        [string] $Edition = "",
 
         # Target ComputeGeneration to the SQL Managed Instance
         # Gen5 | G8IM | G8IH
-        [parameter(Mandatory=$false)] 
-        [string] $ComputeGeneration = "Gen5",
+        [parameter(Mandatory=$true)] 
+        [string] $ComputeGeneration = "",
 
         # Target VCore to the SQL Managed Instance
         # 4 - 128.
-        [parameter(Mandatory=$false)] 
+        [parameter(Mandatory=$true)] 
         [INT32] $VCore = 4,
 
         # Identity to be used on authentication
         [parameter(Mandatory=$true)] 
-        [string] $Identity = "system | ami-automation-central"
+        [string] $Identity = "system | user-managed-identity-name"
         
     )
 
