@@ -131,7 +131,7 @@ workflow Scale-Up-Down-SQL-Managed-Instance
     $secondsDifference = $timeDifference.TotalSeconds
     $MinutesDifference = $timeDifference.TotalMinutes
 
-    #Write-Output "The Scale was executed in $secondsDifference seconds ($MinutesDifference minutes)."
+    Write-Output "The Scale was executed in $secondsDifference seconds ($MinutesDifference minutes)."
     
     Write-Output "*****************************************************************************************"
 
