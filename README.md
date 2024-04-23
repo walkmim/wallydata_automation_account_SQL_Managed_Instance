@@ -1,12 +1,12 @@
 ## Aqui teremos scripts para automatizar manutenção em SQL Managed Instance compatíveis para implementar no Azure Automation Account
 
 
-### Scale-Up-Down-SQL-Managed-Instance
+### Scale Up Down
 
 <p>Esta automação permite que você realize scale de recurso tanto para mais quanto para menos.</p>
 <p>Oriento que estude sobre as limitações de acordo com o seu ambiente pois existe matriz de compatibilidade de recursos para realizar scale up e down. Abaixo uma matriz que montei baseado na documentação Microsoft que pode te ajudar:</p>
 
-![Scale Up Down SQL Managed Instance!](/Scale-Up-Down-SQL-Managed-Instance.png "Scale-Up-Down-SQL-Managed-Instance")
+![Matriz SQL Managed Instance Configuration!](/Scale-Up-Down/MatrizSQLManagedInstanceConfiguration.jpeg "MatrizSQLManagedInstanceConfiguration")
 
 <ul>
 <li>Documentação Microsoft de referência:</li>
