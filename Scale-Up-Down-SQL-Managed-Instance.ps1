@@ -108,7 +108,7 @@ workflow Scale-Up-Down-SQL-Managed-Instance
     
     Write-Output "*****************************************************************************************"
 
-    $startDatetime = Get-Date -Format "dd/MM/yyyy HH:mm:ss" 
+    $startDatetime = Get-Date 
     Write-Output "Starting Changing: $startDatetime"
 
     $null = Set-AzSqlInstance -Name $ManagedInstanceName `
@@ -119,9 +119,9 @@ workflow Scale-Up-Down-SQL-Managed-Instance
         -Force `
         -Confirm:$false
         
-    $EndDatetime = Get-Date -Format "dd/MM/yyyy HH:mm:ss" 
+    $EndDatetime = Get-Date
     
-    
+
     Write-Output "Change finished: $EndDatetime"
 
     # Calculate the time span between the two dates
@@ -131,7 +131,7 @@ workflow Scale-Up-Down-SQL-Managed-Instance
     $secondsDifference = $timeDifference.TotalSeconds
     $MinutesDifference = $timeDifference.TotalMinutes
 
-    Write-Output "The Scale was executed in $secondsDifference seconds ($MinutesDifference minutes)."
+    #Write-Output "The Scale was executed in $secondsDifference seconds ($MinutesDifference minutes)."
     
     Write-Output "*****************************************************************************************"
 
